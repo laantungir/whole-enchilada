@@ -20,8 +20,12 @@ const strLocalRelayURL = "ws://127.0.0.1:8888"
 
 let objRelays = {"wss://relay.corpum.com":{"write":true,"read":true},
                         "wss://nostr.mom":{"write":true,"read":true},
+                        "wss://relay.snort.social":{"write":true,"read":true},
+                        "wss://relay.damus.io":{"write":true,"read":true},
+                        "wss://nostr-pub.wellorder.net":{"write":true,"read":true},
 }
 
+let arrSocket = [] // This is an array to hold all the websocket objects
 
 //////////////////////////////////////////////////////////////////////
 // CONNECT TO LOCAL RELAY
@@ -83,10 +87,9 @@ const ConnectToRelays = async () => {
 const SubscribeToEvents = async (idxSocket) =>{
 
     let ArrSub = ["REQ", "0", {
-        //POSTS OF PEOPLE FOLLOWING
-        
-          "kinds": [1],
-          "since": intTimestampSeconds() -100
+
+            "kinds": [1],
+          "since": intTimestampSeconds() 
         }
         // ,
         // //SELF POSTS
@@ -120,6 +123,30 @@ const SubscribeToEvents = async (idxSocket) =>{
   }
 
 
+const arrNostrRelaysFromNostrWatch = async () => {
+
+let response = await fetch(`https://api.nostr.watch/v1/online`, {
+    headers: {'Accept': 'application/nostr+json'}
+})
+
+const Info = await response.json()
+return Info
+}
+
+const objNostrRelaysFromNostrWatch = async () =>{
+
+    let arrNWR = await arrNostrRelays()
+    let objOut = {}
+    for (Each of arrNWR){
+      objOut[Each] = {
+          "write": false,
+          "read": false
+      }
+    }
+  
+    console.log(objOut)
+  
+  }
 
 //////////////////////////////////////////////////////////////////////
 // REMOTE RELAY EVENTS
@@ -154,15 +181,15 @@ const SubscribeToEvents = async (idxSocket) =>{
     // console.log("E outside", E, typeof E)
     // console.log("in", E, "E" in window)
 
-
-    if( !(E.id === undefined)){
-      // console.log("E inside", E, typeof E)
-      E._id = E.id
-      
-      try { var response = await dbEvents.put(E) 
-        console.log(response)} 
-      catch (err) {console.log(err.message)}
+    // try { var response = await dbEvents.put(E) 
+    try{
+        console.log(relay," --> ", E.content.trim())
+        console.log()
     }
+    catch{
+
+    } 
+    
   }
 
 
