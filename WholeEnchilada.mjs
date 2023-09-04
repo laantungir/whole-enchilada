@@ -27,7 +27,7 @@ let objRelays = {"wss://relay.corpum.com":{"write":true,"read":true},
 // CONNECT TO LOCAL RELAY
 //////////////////////////////////////////////////////////////////////
 
-const ConnectToLocal = async () => { 
+const ConnectToLocalRelay = async () => { 
 
     const wsLocal = new WebSocket(strLocalRelayURL);
 
@@ -170,3 +170,6 @@ const SubscribeToEvents = async (idxSocket) =>{
 //////////////////////////////////////////////////////////////////////
 // MAIN
 //////////////////////////////////////////////////////////////////////
+
+ConnectToLocalRelay()
+ConnectToRelays()
