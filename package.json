@@ -2,13 +2,18 @@
   "name": "whole-enchilada",
   "version": "0.1.1",
   "description": "Your personal nostr event aggrigator.",
-  "main": "index.js",
+  "main": "WholeEnchilada.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run": "node WholeEnchilada.mjs"
   },
   "keywords": [
     "nostr"
   ],
   "author": "Laan Tungir",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@laantungir/utilities": "^1.1.0",
+    "nostr-tools": "^1.14.2",
+    "ws": "^8.13.0"
+  }
 }
