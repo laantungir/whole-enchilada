@@ -1,6 +1,6 @@
 {
   "name": "whole-enchilada",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Your personal nostr event aggrigator.",
   "main": "index.js",
   "scripts": {
