@@ -3,13 +3,16 @@
 // IMPORTS
 //////////////////////////////////////////////////////////////////////
 
-// import {fs} from 'fs'
+
 import * as fs from 'fs';
+
 import {objNostrEvents,
         intTimestampSeconds
         } from "@laantungir/utilities"
 
 import WebSocket from 'ws'
+
+import {getEventHash, getSignature} from 'nostr-tools'
 
 
 //////////////////////////////////////////////////////////////////////
@@ -18,8 +21,7 @@ import WebSocket from 'ws'
 
 const objSettings = JSON.parse(fs.readFileSync('./settings.json', 'utf8') )
 
-const strLocalRelayURL = "ws://127.0.0.1:8888"
-// const strLocalRelayURL = "wss://relay.corpum.com"
+
 
 let wsLocal = ""
 
@@ -34,13 +36,16 @@ let objRelays = {}
 
 let arrSocket = [] // This is an array to hold all the websocket objects
 
+let arrCache = []
+let intArrCacheLength = 20
+
 //////////////////////////////////////////////////////////////////////
 // LOCAL RELAY
 //////////////////////////////////////////////////////////////////////
 
 const ConnectToLocalRelay = async () => { 
 
-    wsLocal = new WebSocket(strLocalRelayURL);
+    wsLocal = new WebSocket(objSettings.local_relay);
 
     wsLocal.on('error', console.error);
 
@@ -60,6 +65,26 @@ const SaveToLocalRelay = async (Event) =>{
     let strSub = JSON.stringify(["EVENT", Event])
     wsLocal.send(strSub)
 }
+
+  // POST AN EVENT TO THE LOCAL RELAY
+  const PostEvent = async (SecKey, PubKey, Kind, arrTags, strContent, ReceiverPubKey = "") => {
+
+    let Event = {}  
+    Event.pubkey = PubKey
+    Event.created_at = Math.floor(Date.now() / 1000)
+    Event.kind = Kind 
+    Event.tags = arrTags 
+    Event.content = strContent
+
+
+    Event.id = getEventHash(Event)
+    Event.sig = getSignature(Event, SecKey)
+
+    let strSub = JSON.stringify(["EVENT", Event])
+    wsLocal.send(strSub)
+
+  }
+
 //////////////////////////////////////////////////////////////////////
 // CONNECT TO REMOTE RELAYS
 //////////////////////////////////////////////////////////////////////
@@ -99,7 +124,7 @@ const SubscribeToEvents = async (idxSocket) =>{
 
     let ArrSub = ["REQ", "0", {
 
-            "kinds": [1],
+         "kinds": [1],
           "since": intTimestampSeconds() 
         }
         // ,
@@ -193,9 +218,22 @@ const objNostrRelaysFromNostrWatch = async () =>{
 
     let arrE = JSON.parse( event.data ) 
 
+    // Check if it is an event
     if (arrE[0] != "EVENT"){ return }
 
+    // Check the recent cache to see if we already received this.
+    if ( arrCache.includes( arrE[2].id ) ){
+        // console.log("Duplicate post", arrE[2].id)
+        return
+    }
+
+    // add the item to the cache and remove last item
+    arrCache.push(arrE[2].id)
+    if (arrCache.length >  intArrCacheLength) { arrCache.shift() }
+
+
     console.log(relay," --> ", arrE[2].content.trim())
+    // console.log(relay," --> ", arrE[2])
     console.log()
   
     SaveToLocalRelay(arrE[2])
@@ -203,17 +241,19 @@ const objNostrRelaysFromNostrWatch = async () =>{
   }
 
 
-setInterval(async ()=> {
-    console.log('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
-    console.log()
-    for (const [index, [key, value]] of Object.entries(Object.entries(objRelays))){
-        console.log(key, value.events, value.last_event_time)
-    }
+// setInterval(async ()=> {
+//     console.log('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
+//     console.log()
+//     for (const [index, [key, value]] of Object.entries(Object.entries(objRelays))){
+//         console.log(key, value.events, value.last_event_time)
+//     }
     
-    console.log()
-    console.log('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
+//     console.log()
+//     console.log('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
 
-}, 30000);
+//     PostEvent(objSettings.keys.nsecHex, objSettings.keys.npubHex, 11000, [], JSON.stringify(objRelays))
+
+// }, 5000);
 
 //////////////////////////////////////////////////////////////////////
 // MAIN
@@ -248,5 +288,5 @@ console.log (Object.keys(objRelays).length )
 
 console.log(objSettings)
 
-// ConnectToLocalRelay()
-// ConnectToRelays()
+ConnectToLocalRelay()
+ConnectToRelays()
