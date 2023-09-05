@@ -16,24 +16,28 @@ import WebSocket from 'ws';
 //////////////////////////////////////////////////////////////////////
 
 const strLocalRelayURL = "ws://127.0.0.1:8888"
+// const strLocalRelayURL = "wss://relay.corpum.com"
 
+let wsLocal = ""
 
-let objRelays = {"wss://relay.corpum.com":{"write":true,"read":true},
+let objDefaultRelays = {"wss://relay.corpum.com":{"write":true,"read":true},
                         "wss://nostr.mom":{"write":true,"read":true},
                         "wss://relay.snort.social":{"write":true,"read":true},
                         "wss://relay.damus.io":{"write":true,"read":true},
                         "wss://nostr-pub.wellorder.net":{"write":true,"read":true},
 }
 
+let objRelays = {}
+
 let arrSocket = [] // This is an array to hold all the websocket objects
 
 //////////////////////////////////////////////////////////////////////
-// CONNECT TO LOCAL RELAY
+// LOCAL RELAY
 //////////////////////////////////////////////////////////////////////
 
 const ConnectToLocalRelay = async () => { 
 
-    const wsLocal = new WebSocket(strLocalRelayURL);
+    wsLocal = new WebSocket(strLocalRelayURL);
 
     wsLocal.on('error', console.error);
 
@@ -43,12 +47,16 @@ const ConnectToLocalRelay = async () => {
     });
 
     wsLocal.on('message', function message(data) {
-    console.log('Local Relay Received: %s', data);
+    console.log('Local Relay  %s', JSON.parse(data)[0]);
     });
 
 }
 
+const SaveToLocalRelay = async (Event) =>{
 
+    let strSub = JSON.stringify(["EVENT", Event])
+    wsLocal.send(strSub)
+}
 //////////////////////////////////////////////////////////////////////
 // CONNECT TO REMOTE RELAYS
 //////////////////////////////////////////////////////////////////////
@@ -135,9 +143,9 @@ return Info
 
 const objNostrRelaysFromNostrWatch = async () =>{
 
-    let arrNWR = await arrNostrRelays()
+    let arrNWR = await arrNostrRelaysFromNostrWatch()
     let objOut = {}
-    for (Each of arrNWR){
+    for (var Each of arrNWR){
       objOut[Each] = {
           "write": false,
           "read": false
@@ -174,29 +182,68 @@ const objNostrRelaysFromNostrWatch = async () =>{
     console.log()
   }
 
+
   const wsOnMessage = async (event, relay) =>{
-    // console.log(`[${relay}] Message`) 
-    // console.log(event)
-    let E = JSON.parse( event.data)[2]
-    // console.log("E outside", E, typeof E)
-    // console.log("in", E, "E" in window)
 
-    // try { var response = await dbEvents.put(E) 
-    try{
-        console.log(relay," --> ", E.content.trim())
-        console.log()
-    }
-    catch{
+    objRelays[relay].events ++ 
+    objRelays[relay].last_event_time = intTimestampSeconds()
 
-    } 
+    let arrE = JSON.parse( event.data ) 
+
+    if (arrE[0] != "EVENT"){ return }
+
+    console.log(relay," --> ", arrE[2].content.trim())
+    console.log()
+  
+    SaveToLocalRelay(arrE[2])
     
   }
 
 
+setInterval(async ()=> {
+    console.log('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
+    console.log()
+    for (const [index, [key, value]] of Object.entries(Object.entries(objRelays))){
+        console.log(key, value.events, value.last_event_time)
+    }
+    
+    console.log()
+    console.log('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
+
+}, 30000);
 
 //////////////////////////////////////////////////////////////////////
 // MAIN
 //////////////////////////////////////////////////////////////////////
+
+
+// objRelays = objDefaultRelays 
+
+
+let arrAllRelays = await arrNostrRelaysFromNostrWatch()
+console.log(arrAllRelays)
+let NumRelays = 1000 
+
+if (NumRelays > arrAllRelays.length){
+    NumRelays = arrAllRelays.length
+}
+
+
+// Shuffle array
+const arrShuffled = arrAllRelays.sort(() => 0.5 - Math.random());
+let arrSelected = arrShuffled.slice(0, NumRelays);
+
+
+objRelays = {}
+for (let i = 0; i < NumRelays ; i++){
+    objRelays[arrSelected[i]] = {"write":true, "read": true, "events": 0, "connected": false, "last_event_time": 0}
+}
+
+
+console.log (objRelays)
+console.log (Object.keys(objRelays).length )
+
+
 
 ConnectToLocalRelay()
 ConnectToRelays()
