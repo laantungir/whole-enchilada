@@ -1,0 +1,9 @@
+{   "local_relay": "ws://127.0.0.1:8888",
+    "keys": {   "nsecHex":"e5f17972b44098331afc4aab69c1beb6d32d225f0b96aa186bf1fdb539d487ff", 
+                "npubHex":"37fc173014beded92ef4e387a18f0b61ebdd1aa89ba340820d8c4ebcff208c5e",
+                "nsec":"nsec1uhchju45gzvrxxhuf24knsd7kmfj6gjlpwt25xrt787m2ww5sllscvjqaj",
+                "npub":"npub1xl7pwvq5hm0djth5uwr6rrctv84a6x4gnw35pqsd338teleq330q2sllzk"
+            }
+    
+
+}

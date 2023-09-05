@@ -3,17 +3,20 @@
 // IMPORTS
 //////////////////////////////////////////////////////////////////////
 
-
+// import {fs} from 'fs'
+import * as fs from 'fs';
 import {objNostrEvents,
         intTimestampSeconds
         } from "@laantungir/utilities"
 
-import WebSocket from 'ws';
+import WebSocket from 'ws'
 
 
 //////////////////////////////////////////////////////////////////////
 // GLOBAL VARIABLES
 //////////////////////////////////////////////////////////////////////
+
+const objSettings = JSON.parse(fs.readFileSync('./settings.json', 'utf8') )
 
 const strLocalRelayURL = "ws://127.0.0.1:8888"
 // const strLocalRelayURL = "wss://relay.corpum.com"
@@ -243,7 +246,7 @@ for (let i = 0; i < NumRelays ; i++){
 console.log (objRelays)
 console.log (Object.keys(objRelays).length )
 
+console.log(objSettings)
 
-
-ConnectToLocalRelay()
-ConnectToRelays()
+// ConnectToLocalRelay()
+// ConnectToRelays()
