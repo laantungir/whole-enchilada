@@ -233,7 +233,6 @@ const objNostrRelaysFromNostrWatch = async () =>{
 
 
     console.log(relay," --> ", arrE[2].content.trim())
-    // console.log(relay," --> ", arrE[2])
     console.log()
   
     SaveToLocalRelay(arrE[2])
@@ -241,19 +240,19 @@ const objNostrRelaysFromNostrWatch = async () =>{
   }
 
 
-// setInterval(async ()=> {
-//     console.log('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
-//     console.log()
-//     for (const [index, [key, value]] of Object.entries(Object.entries(objRelays))){
-//         console.log(key, value.events, value.last_event_time)
-//     }
+setInterval(async ()=> {
+    // console.log('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
+    // console.log()
+    // for (const [index, [key, value]] of Object.entries(Object.entries(objRelays))){
+    //     console.log(key, value.events, value.last_event_time)
+    // }
     
-//     console.log()
-//     console.log('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
+    // console.log()
+    // console.log('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
 
-//     PostEvent(objSettings.keys.nsecHex, objSettings.keys.npubHex, 11000, [], JSON.stringify(objRelays))
+    PostEvent(objSettings.keys.nsecHex, objSettings.keys.npubHex, 11000, [], JSON.stringify(objRelays))
 
-// }, 5000);
+}, 5000);
 
 //////////////////////////////////////////////////////////////////////
 // MAIN
