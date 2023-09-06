@@ -7,7 +7,7 @@
 import * as fs from 'fs';
 
 import {objNostrEvents,
-        intTimestampSeconds
+        intTimestampSeconds,
         } from "@laantungir/utilities"
 
 import WebSocket from 'ws'
@@ -124,7 +124,7 @@ const SubscribeToEvents = async (idxSocket) =>{
 
     let ArrSub = ["REQ", "0", {
 
-         "kinds": [1],
+
           "since": intTimestampSeconds() 
         }
         // ,
@@ -221,9 +221,9 @@ const objNostrRelaysFromNostrWatch = async () =>{
     // Check if it is an event
     if (arrE[0] != "EVENT"){ return }
 
-    // Check the recent cache to see if we already received this.
+    // Check the recent cache to see if we already received this
+    // from another relay
     if ( arrCache.includes( arrE[2].id ) ){
-        // console.log("Duplicate post", arrE[2].id)
         return
     }
 
@@ -231,6 +231,10 @@ const objNostrRelaysFromNostrWatch = async () =>{
     arrCache.push(arrE[2].id)
     if (arrCache.length >  intArrCacheLength) { arrCache.shift() }
 
+    // Add to the count of this type of event for posterity 
+    if ( objNostrEvents[arrE[2].kind] != undefined){
+      objNostrEvents[arrE[2].kind].count ++
+    }
 
     console.log(relay," --> ", arrE[2].content.trim())
     console.log()
@@ -251,6 +255,7 @@ setInterval(async ()=> {
     // console.log('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
 
     PostEvent(objSettings.keys.nsecHex, objSettings.keys.npubHex, 11000, [], JSON.stringify(objRelays))
+    PostEvent(objSettings.keys.nsecHex, objSettings.keys.npubHex, 11001, [], JSON.stringify(objNostrEvents))
 
 }, 5000);
 
@@ -261,10 +266,15 @@ setInterval(async ()=> {
 
 // objRelays = objDefaultRelays 
 
+// Set up objNostrEvents to start keeping track of their count
+for (let Key of Object.keys(objNostrEvents)){
+  objNostrEvents[Key].count = 0
+}
+
 
 let arrAllRelays = await arrNostrRelaysFromNostrWatch()
 console.log(arrAllRelays)
-let NumRelays = 1000 
+let NumRelays = 10
 
 if (NumRelays > arrAllRelays.length){
     NumRelays = arrAllRelays.length
@@ -287,5 +297,5 @@ console.log (Object.keys(objRelays).length )
 
 console.log(objSettings)
 
-ConnectToLocalRelay()
+await ConnectToLocalRelay()
 ConnectToRelays()
