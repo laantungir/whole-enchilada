@@ -236,14 +236,16 @@ const objNostrRelaysFromNostrWatch = async () =>{
       objNostrEvents[arrE[2].kind].count ++
     }
 
-    console.log(relay," --> ", arrE[2].content.trim())
-    console.log()
+    // console.log(objNostrEvents)
+    // console.log(relay," --> ", arrE[2].content.trim())
+    // console.log()
   
     SaveToLocalRelay(arrE[2])
     
   }
 
 
+// Every interval, post statistics locally
 setInterval(async ()=> {
     // console.log('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
     // console.log()
@@ -259,6 +261,14 @@ setInterval(async ()=> {
 
 }, 5000);
 
+
+// Every interval, check relays for connection 
+setInterval(async ()=> {
+
+
+}, 60000);
+
+
 //////////////////////////////////////////////////////////////////////
 // MAIN
 //////////////////////////////////////////////////////////////////////
@@ -271,31 +281,43 @@ for (let Key of Object.keys(objNostrEvents)){
   objNostrEvents[Key].count = 0
 }
 
-
+// Help to set up relays in settings.
 let arrAllRelays = await arrNostrRelaysFromNostrWatch()
-console.log(arrAllRelays)
-let NumRelays = 10
-
-if (NumRelays > arrAllRelays.length){
-    NumRelays = arrAllRelays.length
+let objR = {}
+for (let Each of arrAllRelays){
+  objR[Each] = {"write":true, "read": true, "events": 0, "connect": false, "connected": false, "last_event_time": 0}
 }
+fs.promises.writeFile('./relays.json', JSON.stringify(objR))
+console.log(arrAllRelays)
+
+
+
+// let NumRelays = 10
+
+// if (NumRelays > objSettings.relays.length){
+//     NumRelays = objSettings.relays.length
+// }
 
 
 // Shuffle array
-const arrShuffled = arrAllRelays.sort(() => 0.5 - Math.random());
-let arrSelected = arrShuffled.slice(0, NumRelays);
+// const arrShuffled = objSettings.relays.sort(() => 0.5 - Math.random());
+// let arrSelected = arrShuffled.slice(0, NumRelays);
 
 
-objRelays = {}
-for (let i = 0; i < NumRelays ; i++){
-    objRelays[arrSelected[i]] = {"write":true, "read": true, "events": 0, "connected": false, "last_event_time": 0}
-}
+// objRelays = {}
+// for (let i = 0; i < NumRelays ; i++){
+//     objRelays[arrSelected[i]] = {"write":true, "read": true, "events": 0, "connected": false, "last_event_time": 0}
+// }
 
+// objRelays = {}
+// for (let i = 0; i < NumRelays ; i++){
+//     objRelays[arrSelected[i]] = {"write":true, "read": true, "events": 0, "connected": false, "last_event_time": 0}
+// }
 
-console.log (objRelays)
-console.log (Object.keys(objRelays).length )
+// console.log (objRelays)
+// console.log (Object.keys(objRelays).length )
 
-console.log(objSettings)
+// console.log(objSettings)
 
-await ConnectToLocalRelay()
-ConnectToRelays()
+// await ConnectToLocalRelay()
+// ConnectToRelays()

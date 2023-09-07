@@ -1,9 +1,4467 @@
-{   "local_relay": "ws://127.0.0.1:8888",
-    "keys": {   "nsecHex":"e5f17972b44098331afc4aab69c1beb6d32d225f0b96aa186bf1fdb539d487ff", 
-                "npubHex":"37fc173014beded92ef4e387a18f0b61ebdd1aa89ba340820d8c4ebcff208c5e",
-                "nsec":"nsec1uhchju45gzvrxxhuf24knsd7kmfj6gjlpwt25xrt787m2ww5sllscvjqaj",
-                "npub":"npub1xl7pwvq5hm0djth5uwr6rrctv84a6x4gnw35pqsd338teleq330q2sllzk"
-            }
-    
-
+{
+    "local_relay": "ws://127.0.0.1:8888",
+    "keys": {
+        "nsecHex": "e5f17972b44098331afc4aab69c1beb6d32d225f0b96aa186bf1fdb539d487ff",
+        "npubHex": "37fc173014beded92ef4e387a18f0b61ebdd1aa89ba340820d8c4ebcff208c5e",
+        "nsec": "nsec1uhchju45gzvrxxhuf24knsd7kmfj6gjlpwt25xrt787m2ww5sllscvjqaj",
+        "npub": "npub1xl7pwvq5hm0djth5uwr6rrctv84a6x4gnw35pqsd338teleq330q2sllzk"
+    },
+    "relays": {
+        "wss://relay.damus.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-pub.wellorder.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.mom": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.slothy.win": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://global.relay.red": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://sg.qemura.xyz": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.stoner.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.einundzwanzig.space": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nos.lol": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostr.band": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.oldcity-bitcoiners.info": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.bongbong.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.sendstr.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.cryptocculture.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.massmux.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-relay.schnitzel.world": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostr.com.au": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://knostr.neutrine.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.nodeofsven.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostr.ro": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostrich.de": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.vulpem.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.farscapian.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr3.actn.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.sovereign-stack.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-verif.slothy.win": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.supremestack.xyz": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-1.nbo.angani.co": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.plebstr.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.wellorder.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.handyjunky.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay-pub.deschooling.us": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.easydns.ca": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.dwadziesciajeden.pl": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-pub1.southflorida.ninja": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.orangepill.dev": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.600.wtf": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://e.nos.lol": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostrich.friendship.tw": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostream-production-5895.up.railway.app": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.bitcoin.sex": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-relay.texashedge.xyz": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.btcmp.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostr.africa": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://ragnar-relay.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.zkid.social": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.data.haus": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.terminus.money": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.0ne.day": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.valera.co": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.wine": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.koning-degraaf.nl": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.pleb.network": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.cheeserobot.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.thank.eu": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.hamnet.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.shroomslab.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.truckenbucks.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://zee-relay.fly.dev": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.blockpower.capital": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.sidnlabs.nl": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-rs-relay.cryptoassetssubledger.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.inosta.cc": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr21.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://arc1.arcadelabs.co": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostr.distrl.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://spore.ws": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.ch3n2k.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.island.network": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostrview.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostromo.social": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://offchain.pub": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostr.wirednet.jp": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://jp-relay-nostr.invr.chat": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.humanumest.social": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://paid.spore.ws": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.l00p.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.reeve.cn": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://lightningrelay.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://bitcoinmaximalists.online": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.rocket-tech.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-2.afarazit.eu": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://private.red.gb.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostrid.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.uthark.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.cruncher.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostrcheck.me": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostrelay.yeghro.site": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostr.vet": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.yuv.al": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.lacosanostr.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostrdocs.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostrue.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.danvergara.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://n.xmr.se": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nproxy.kristapsk.lv": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.topeth.info": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.klabo.blog": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.bitcoiner.social": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.orange-crush.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.screaminglife.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.roundrockbitcoiners.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.f7z.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.shawnyeager.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostriches.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostrology.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.kollider.xyz": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.bch.ninja": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostrati.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-relay.nokotaro.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.snort.social": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.lu.ke": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://atlas.nostr.land": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.ownbtc.online": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.fmt.wiz.biz": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.actn.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.688.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://global-relay.cesc.trade": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.pjv.me": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://rsslay.nostr.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://rsslay.nostr.moe": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostrex.fly.dev": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.roli.social": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://brb.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://eden.nostr.land": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-verified.wellorder.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.noones.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.milou.lol": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostr.nu": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.w3ird.tech": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-relay.bitcoin.ninja": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://paid.no.str.cr": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://deschooling.us": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://foolay.nostr.moe": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.mikedilger.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://bitcoiner.social": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://klockenga.social": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.1f52b.xyz": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.sebastix.dev": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay-verified.deschooling.us": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.cizmar.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://n.wingu.se": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostr.hach.re": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.asdf.mx": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.bitcoinplebs.de": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.goller.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr01.vida.dev": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://tmp-relay.cesc.trade": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.plebchain.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.mutinywallet.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.decentony.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.tools.global.id": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostrsatva.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://xmr.usenostr.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.naut.social": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://at.nostrworks.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.sovbit.host": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.1sat.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.leesalminen.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://mastodon.cloud/api/v1/streaming": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.256k1.dev": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.beta.fogtype.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://rsslay.ch3n2k.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.rocketnode.space": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostr.bg": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.globals.fans": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.primz.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostr.au": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://btc.klendazu.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.n057r.club": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://slick.mjex.me": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.yael.at": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.lorentz.is": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostrified.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.orangepill.dev": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.pinkanki.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.primal.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.cercatrova.me": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.swiss-enigma.ch": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-relay.derekross.me": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://puravida.nostr.land": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.oxtr.dev": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.sandwich.farm": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.s3x.social": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.liberty.fans": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-01.bolt.observer": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostrrelay.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.frostr.xyz": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-pub.semisol.dev": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.semisol.dev": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://misskey.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.gruntwerk.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://btcpay.kukks.org/nostr/ws": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.mostr.pub": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.shitforce.one": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostrplebs.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://purplepag.es": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://yestr.me": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relayable.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.0x50.tech": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://paid.nostrified.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://btc-italia.online": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-02.dorafactory.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.zbd.gg": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.hodl.ar": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostr.sc": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://feeds.nostr.band/nostrhispano": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.itas.li": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.middling.mydns.jp": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://ca.orangepill.dev": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.portemonero.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://search.nos.today": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://rsslay.onrender.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.minds.com/nostr/v1/ws": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.maximacitadel.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://n29.nostr.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://welcome.nostr.wine": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://yabu.me": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.chicagoplebs.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://adult.18plus.social": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://blastr.f7z.xyz": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nrelay.c-stellar.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostrja-kari.heguro.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://therelayofallrelays.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr1.current.fyi": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-relay.app": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nb.relay.center": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://wine.relay.center": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://damus.relay.center": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://offchain.relay.center": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://ts.relays.world": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relays.world/nostr": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.azte.co": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://snort.relay.center": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://rly.nostrkid.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.filmweb.pl": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://stealth.wine": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://africa.nostr.joburg": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.superfriends.online": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://free.nostr.lc": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostrswap.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.simplex.icu": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.carlostkd.ch": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.utxo.one": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.openhoofd.nl": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.bitblockboom.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.strits.dk": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.zenon.info": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.thesamecat.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.deezy.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-usa.ka1gbeoa21bnm.us-west-2.cs.amazonlightsail.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.poster.place": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://anon.computer": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://freerelay.xyz": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://bitcoinforthe.lol": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.mining.sc": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.bitransfer.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.xmr.rocks": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.dvdt.dev": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://test.nostr.lc": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://paid.nostr.lc": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://ithurtswhenip.ee": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nerostr.xmr.rocks": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.sethforprivacy.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.vanderwarker.family": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://wc1.current.ninja": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.toastr.space": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.ingwie.me": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://n0p0.shroomslab.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://botrelay.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostrpub.yeghro.site": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.gleeze.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay2.nostrchat.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay1.nostrchat.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.greenart7c3.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://ln.weedstr.net/nostrrelay/weedstr": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.devstr.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://pleb.cloud": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.dakukitsune.ca": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.hifish.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://rly.social": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostrja-kari-nip50.heguro.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.chainbits.co.uk": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-rs-relay.phamthanh.me": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostrua.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.nicfab.eu": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.irrelevant.mooo.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nsc.pleb.cloud": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-badur.onrender.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://bolverker.com/nostrclient/api/v1/relay": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostrbr.online": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://ca.relayable.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://eden.relay.center": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.stpaulinternet.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.f4255529.shop": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.koutakou.tech": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.dncn.xyz": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://booger.pro": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nsecbunker.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.rip": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.house": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.dogdogback.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay2.nostr.vet": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostr.youlot.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.hekster.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.xpedite-tech.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.privoxy.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.debancariser.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.layer.systems": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://denostr.paiya.app": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.leafbodhi.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.schorsch.fans": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.reelnetwork.eu": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.indexafrica.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.kisiel.net.pl": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostr.directory": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.wavlake.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://r.v0l.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-tbd.website": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://sats.lnaddy.com/nostrclient/api/v1/relay": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.impervious.live": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.melhorque.com.br": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.438b.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.fmar.link": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nfdn.betanet.dotalgo.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.plebz.space": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostr.lighting": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.sagaciousd.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.fbxl.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.donky.social": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.metamadeenah.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://kukks.org/nostr": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://rsslay-production-bc22.up.railway.app": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostrja-world-relays-test.heguro.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://multiplextr.coracle.social": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.bolt.fun": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-relay-test.nokotaro.work": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.kongerik.et": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://dave.st.germa.in/nostr": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostril.cam": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.btc-library.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.getalby.com/v1": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://rss.nos.social": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.txinito.xyz": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.overmind.lol": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://anonymousgreen.com/nostrclient/api/v1/relay": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://crayon.nostr-demo.relayaas.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostrools.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://beta.nostril.cam": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.cr0.bar": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostrcn.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://dev.nostrplayground.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.ivmanto.dev": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://ryan.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-01.yakihonne.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://la.relayable.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.geyser.fund": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.0xchat.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.flurs.art": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.fort-btc.club": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostrfiles.dev": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.bitcoinpark.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.seankibler.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://satdow.relaying.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.olwe.link": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr01.counterclockwise.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://test.relay.report": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relap.orzv.workers.dev": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://christpill.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.bitransfermedia.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.cubanoticias.info": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://egirls.relaying.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.sixteensixtyone.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://saltivka.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.danvergara.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay1.nostr.unitedfop.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://filter.stealth.wine?broadcast=true": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.xmr.sh": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.coinfundit.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.verified-nostr.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.sathoarder.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.sudocarlos.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.break-19.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.planz.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://wbc.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostrrelay.eximpius.xyz": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.eluc.ch": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.protest.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://lnbits.eldamar.icu/nostrrelay/relay": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://pater.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.heliodex.cf": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.getgle.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.lnbitcoin.cz": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.libreleaf.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.plebz.space": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://lnbits.michaelantonfischer.com/nostrrelay/michaelantonf": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.relayable.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.casualcrypto.date": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://lightning.benchodroff.com/nostrclient/api/v1/relay": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://lnbits.plebtag.com/nostrclient/api/v1/relay": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://butcher.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://jovial-fuchsia-euhyboma.scarab.im": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.notmandatory.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.cx.ms": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.conxole.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.roli.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://tictac.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.40two.cloud": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.dynopool.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://fpr.gadstr.xyz": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://bitstack.app": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.tenna.site": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nos.nth.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-relay.psfoundation.info": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://purplerelay.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.hrf.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://fiatdenier.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.orangepill.ovh": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.relayable.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostrhackers.online": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay1.nostrswap.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.kmchu.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.tchaicap.space": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.rubberdoll.cc": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostrassets.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.ingwie.me": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-relay.ktwo.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://fistfistrelay.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://soloco.nl": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.codingarena.de": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.dlsouza.lol": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.kamp.site": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.heavyrubberslave.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostry.eu": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://lnbits.btcpins.com/nostrclient/api/v1/relay": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.keychat.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://danserver.equipment/nostr": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://he.relayable.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://au.relayable.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.ohbe.me": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.got-relayed.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.lecturify.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.hankhub.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.ass.tools": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.bitcoinist.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.thegrungies.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.stakey.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://a.nos.lol": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://teemie1-relay.duckdns.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.notes.social": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://hodlbod.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.yonle.lecturify.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://staging.nostpy.lol": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://eu.purplerelay.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.rly.social": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostrigator.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.kaosfield.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.lnproxy.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://greensoul.space": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://holylamb.online": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://21ideas.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://hotrightnow.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.bitcoinbarcelona.xyz": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://rly.bopln.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.fractalized.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://verbiricha.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay-jp.shino3.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://r.hostr.cc": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.stemstr.app": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://zh.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://bevo.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://cache2.primal.net/v1": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nquiz.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.self-determined.de": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.legalsecurity.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://gardn.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://feedstr.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://supertestnet.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.leligobit.link": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.glate.ch": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.disism.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.kleofash.eu": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-test.novacisko.cz": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.zoz-serv.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.girino.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr2.girino.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.gerbils.online": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.novacisko.cz": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.kiatsu.world": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.0x7e.xyz": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://sakhalin.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://adre.su": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://rlay.online": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://remnant.cloud": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.kungfu-g.rip": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.guggero.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.xp.live": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.minibolt.info": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://sindicato.social/api/v1/streaming": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://pay21.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://cache1.primal.net/v1": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://misskey.art": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://merrcurrup.railway.app": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.umbrel.karmas.fr": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-dev.zbd.gg": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.oke.minds.io/nostr/v1/ws": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostrwolf.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.zerosatoshi.xyz": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://testrelay.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://tw.purplerelay.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://za.purplerelay.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://atl.purplerelay.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.vimmyvimmy.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.tamodigi.tech": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://misskey.systems": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://novoa.nagoya": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://submarin.online": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://mi-wo.site": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://premis.one": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://misskey.04.si": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://social.camph.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.favvy.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.lisp-cn.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://sg.unfiltered.zone": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://in.purplerelay.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.fairshare.social": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.pleb.to": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr2.kleofash.eu": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.hashi.sbs": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.coldforge.xyz": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostr.me": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.atitlan.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.zaplab.space": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://lease-specified-campaign-boost.trycloudflare.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://newperspectives.duckdns.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://mockingyou.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.bilthon.dev": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.bitcoinetf.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.0v0.social": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.openordex.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.cxcore.net": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.service.mapboss.co.th": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay1.easymeta.app": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr-rs-relay-ork5.onrender.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nsrelay.assilvestrar.club": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://nostr.lbdev.fun": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.corpum.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://vitor.relaying.io": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://agora.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.unikku.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://crimsonleaf363.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.nostrhub.fr": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.noswhere.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://pablof7z.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://zyro.nostr1.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://orangepiller.org": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        },
+        "wss://relay.satoshidnc.com": {
+            "write": true,
+            "read": true,
+            "events": 0,
+            "connect": false,
+            "connected": false,
+            "last_event_time": 0
+        }
+    }
 }
