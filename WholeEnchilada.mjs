@@ -21,20 +21,11 @@ import {getEventHash, getSignature} from 'nostr-tools'
 
 const objSettings = JSON.parse(fs.readFileSync('./settings.json', 'utf8') )
 
-
+let objRelays = objSettings.relays
 
 let wsLocal = ""
 
-let objDefaultRelays = {"wss://relay.corpum.com":{"write":true,"read":true},
-                        "wss://nostr.mom":{"write":true,"read":true},
-                        "wss://relay.snort.social":{"write":true,"read":true},
-                        "wss://relay.damus.io":{"write":true,"read":true},
-                        "wss://nostr-pub.wellorder.net":{"write":true,"read":true},
-}
-
-let objRelays = {}
-
-let arrSocket = [] // This is an array to hold all the websocket objects
+let objSocket = {} // This is an array to hold all the websocket objects
 
 let arrCache = []
 let intArrCacheLength = 20
@@ -92,35 +83,36 @@ const SaveToLocalRelay = async (Event) =>{
 
 const ConnectToRelays = async () => { 
 
-    console.log(Object.keys(objRelays))
+  // console.log(Object.keys(objRelays))
 
-    for (const [index, [key, value]] of Object.entries(Object.entries(objRelays))){
+  for (let Relay of Object.keys(objRelays)){
 
-        console.log(index, key, value)
-        arrSocket[index]= new WebSocket(key)
+    if (objRelays[Relay].connect){
+      console.log("Connect to ", Relay)
 
-        arrSocket[index].onopen = function(event) {
-        wsOnOpen(event, key, index)
-        }
+      objSocket[Relay]= new WebSocket(Relay)
 
-        arrSocket[index].onmessage = function(event) {
-        wsOnMessage(event,key)
-        }
+      objSocket[Relay].onopen = function(event) {
+      wsOnOpen(event,  Relay)
+      }
 
-        arrSocket[index].onclose = function(event) {
-        wsOnClose(event,key)
-        }
+      objSocket[Relay].onmessage = function(event) {
+      wsOnMessage(event, Relay)
+      }
 
-        arrSocket[index].onerror = function(error) {
-        wsOnError(error,key)
-        }
+      objSocket[Relay].onclose = function(event) {
+      wsOnClose(event, Relay)
+      }
 
-
-        }
+      objSocket[Relay].onerror = function(error) {
+      wsOnError(error, Relay)
+      }
+    }
+  }
 }
 
 
-const SubscribeToEvents = async (idxSocket) =>{
+const SubscribeToEvents = async (Relay) =>{
 
     let ArrSub = ["REQ", "0", {
 
@@ -151,10 +143,10 @@ const SubscribeToEvents = async (idxSocket) =>{
     // console.log(event)
     // let E = JSON.parse( event.data)[2]
 
-    console.log(`Subscribing to relay ${idxSocket}  ${arrSocket[idxSocket]}`)
+    console.log(`Subscribing to relay ${Relay}`)
     console.log(JSON.stringify(ArrSub))
 
-    arrSocket[idxSocket].send(JSON.stringify(ArrSub))
+    objSocket[Relay].send(JSON.stringify(ArrSub))
 
   }
 
@@ -188,15 +180,16 @@ const objNostrRelaysFromNostrWatch = async () =>{
 // REMOTE RELAY EVENTS
 //////////////////////////////////////////////////////////////////////
 
-  const wsOnOpen = async (event, relay, idxSocket) =>{
+  const wsOnOpen = async (event, relay) =>{
     console.log(`[${relay}] Connection established`) 
-
-    SubscribeToEvents(idxSocket)
+    objRelays[relay].connected = true
+    SubscribeToEvents(relay)
     // console.log(event)
     // PreloadUser()
   }
 
   const wsOnClose = async (event, relay) =>{
+    objRelays[relay].connected = false
     if (event.wasClean) {
       console.log(`[${relay}] Connection closed clean`) 
     } else {
@@ -212,7 +205,7 @@ const objNostrRelaysFromNostrWatch = async () =>{
 
 
   const wsOnMessage = async (event, relay) =>{
-
+    console.log(`message on relay ${relay}`)
     objRelays[relay].events ++ 
     objRelays[relay].last_event_time = intTimestampSeconds()
 
@@ -237,9 +230,10 @@ const objNostrRelaysFromNostrWatch = async () =>{
     }
 
     // console.log(objNostrEvents)
-    // console.log(relay," --> ", arrE[2].content.trim())
-    // console.log()
+    console.log(relay," --> ", arrE[2].content.trim())
+    console.log()
   
+    
     SaveToLocalRelay(arrE[2])
     
   }
@@ -259,14 +253,22 @@ setInterval(async ()=> {
     PostEvent(objSettings.keys.nsecHex, objSettings.keys.npubHex, 11000, [], JSON.stringify(objRelays))
     PostEvent(objSettings.keys.nsecHex, objSettings.keys.npubHex, 11001, [], JSON.stringify(objNostrEvents))
 
-}, 5000);
+}, 50000);
 
 
 // Every interval, check relays for connection 
-setInterval(async ()=> {
+// setInterval(async ()=> {
 
+//   for (let Relay of Object.keys(objRelays))
+//   {
+//     if (objRelays[Relay].connect) {
+//       console.log(objRelays[Relay])
+//     }
 
-}, 60000);
+//   console.log("Status", )
+
+//   }
+// }, 4000);
 
 
 //////////////////////////////////////////////////////////////////////
@@ -282,42 +284,31 @@ for (let Key of Object.keys(objNostrEvents)){
 }
 
 // Help to set up relays in settings.
-let arrAllRelays = await arrNostrRelaysFromNostrWatch()
-let objR = {}
-for (let Each of arrAllRelays){
-  objR[Each] = {"write":true, "read": true, "events": 0, "connect": false, "connected": false, "last_event_time": 0}
-}
-fs.promises.writeFile('./relays.json', JSON.stringify(objR))
-console.log(arrAllRelays)
-
-
-
-// let NumRelays = 10
-
-// if (NumRelays > objSettings.relays.length){
-//     NumRelays = objSettings.relays.length
+// let arrAllRelays = await arrNostrRelaysFromNostrWatch()
+// let objR = {}
+// for (let Each of arrAllRelays){
+//   objR[Each] = {"write":true, "read": true, "events": 0, "connect": false, "connected": false, "last_event_time": 0}
 // }
+// fs.promises.writeFile('./relays.json', JSON.stringify(objR))
+// console.log(arrAllRelays)
 
+
+// process.exit()
+
+let NumRelays = 1000
+
+if (NumRelays > objRelays.length){
+    NumRelays = objRelays.length
+}
 
 // Shuffle array
-// const arrShuffled = objSettings.relays.sort(() => 0.5 - Math.random());
-// let arrSelected = arrShuffled.slice(0, NumRelays);
+let arrSelected = Object.keys(objRelays)
+arrSelected = arrSelected.sort(() => 0.5 - Math.random());
+arrSelected = arrSelected.slice(0, NumRelays);
 
+for (let Relay of arrSelected){
+  objRelays[Relay].connect = true
+}
 
-// objRelays = {}
-// for (let i = 0; i < NumRelays ; i++){
-//     objRelays[arrSelected[i]] = {"write":true, "read": true, "events": 0, "connected": false, "last_event_time": 0}
-// }
-
-// objRelays = {}
-// for (let i = 0; i < NumRelays ; i++){
-//     objRelays[arrSelected[i]] = {"write":true, "read": true, "events": 0, "connected": false, "last_event_time": 0}
-// }
-
-// console.log (objRelays)
-// console.log (Object.keys(objRelays).length )
-
-// console.log(objSettings)
-
-// await ConnectToLocalRelay()
-// ConnectToRelays()
+await ConnectToLocalRelay()
+ConnectToRelays()
